@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>孔子问道老子 - 三次神圣对话</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap');
+    body {
+      font-family: 'Noto Sans SC', sans-serif;
+      background-color: #f8f9fa;
+    }
+    .bento-cell {
+      transition: all 0.3s ease;
+    }
+    .bento-cell:hover {
+      transform: translateY(-5px);
+    }
+    .water-path {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: dash 5s linear forwards;
+    }
+    @keyframes dash {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+  <div class="container mx-auto px-4 py-12 max-w-7xl">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h1 class="text-5xl md:text-7xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-400 mb-4">
+        孔子问道老子
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 font-medium">
+        影响中国两千年的三次神圣对话
+      </p>
+    </div>
+
+    <!-- Bento Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+      <!-- Cell 1 - 3 Dialogues -->
+      <div class="bento-cell md:col-span-3 bg-white rounded-3xl p-8 shadow-lg border border-gray-100">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-6 md:mb-0 md:pr-8">
+            <h2 class="text-4xl font-black text-gray-800 mb-4">
+              <span class="text-6xl bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-orange-500">3</span> 次对话
+            </h2>
+            <p class="text-gray-600 mb-4 text-lg">
+              闻一多评价为"四千多年历史中最神圣的个人对话"
+            </p>
+            <div class="flex space-x-4">
+              <div class="bg-amber-50 px-4 py-2 rounded-full">
+                <span class="text-amber-700 font-bold">人道</span>
+                <span class="text-gray-500 text-sm ml-1">Confucius</span>
+              </div>
+              <div class="bg-blue-50 px-4 py-2 rounded-full">
+                <span class="text-blue-700 font-bold">天道</span>
+                <span class="text-gray-500 text-sm ml-1">Laozi</span>
+              </div>
+            </div>
+          </div>
+          <div class="md:w-1/2">
+            <svg width="100%" height="200" viewBox="0 0 400 200" class="overflow-visible">
+              <path d="M50,100 Q200,50 350,100" stroke="#3B82F6" stroke-width="4" fill="none" class="water-path"/>
+              <circle cx="50" cy="100" r="8" fill="#3B82F6"/>
+              <circle cx="200" cy="50" r="8" fill="#3B82F6"/>
+              <circle cx="350" cy="100" r="8" fill="#3B82F6"/>
+              <text x="50" y="130" text-anchor="middle" class="text-sm font-bold fill-gray-700">第一次</text>
+              <text x="200" y="30" text-anchor="middle" class="text-sm font-bold fill-gray-700">第二次</text>
+              <text x="350" y="130" text-anchor="middle" class="text-sm font-bold fill-gray-700">第三次</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cell 2 - First Dialogue -->
+      <div class="bento-cell bg-white rounded-3xl p-6 shadow-lg border border-gray-100">
+        <div class="flex items-center mb-4">
+          <div class="bg-blue-100 p-3 rounded-full mr-4">
+            <i class="fas fa-water text-blue-500 text-xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800">第一次问道</h3>
+        </div>
+        <p class="text-gray-600 mb-4">
+          年轻孔子愤青时期，老子以"上善若水"点化
+        </p>
+        <div class="bg-blue-50 p-4 rounded-xl mb-3">
+          <p class="text-blue-800 font-medium italic">
+            "水善利万物而不争"
+          </p>
+        </div>
+        <p class="text-gray-600 text-sm">
+          老子劝诫孔子收敛张扬，学会像水一样柔弱胜刚强
+        </p>
+      </div>
+
+      <!-- Cell 3 - Second Dialogue -->
+      <div class="bento-cell bg-white rounded-3xl p-6 shadow-lg border border-gray-100">
+        <div class="flex items-center mb-4">
+          <div class="bg-green-100 p-3 rounded-full mr-4">
+            <i class="fas fa-leaf text-green-500 text-xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800">第二次问道</h3>
+        </div>
+        <p class="text-gray-600 mb-4">
+          34岁迷茫时期，老子讲"顺其自然"之道
+        </p>
+        <div class="bg-green-50 p-4 rounded-xl mb-3">
+          <p class="text-green-800 font-medium italic">
+            "天地万物皆自然"
+          </p>
+        </div>
+        <p class="text-gray-600 text-sm">
+          老子指出过度追求仁义礼乐反而会适得其反
+        </p>
+      </div>
+
+      <!-- Cell 4 - Third Dialogue -->
+      <div class="bento-cell bg-white rounded-3xl p-6 shadow-lg border border-gray-100">
+        <div class="flex items-center mb-4">
+          <div class="bg-purple-100 p-3 rounded-full mr-4">
+            <i class="fas fa-mountain text-purple-500 text-xl"></i>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800">第三次问道</h3>
+        </div>
+        <p class="text-gray-600 mb-4">
+          51岁悟道时期，探讨"何为天道"
+        </p>
+        <div class="bg-purple-50 p-4 rounded-xl mb-3">
+          <p class="text-purple-800 font-medium italic">
+            "道可道，非常道"
+          </p>
+        </div>
+        <p class="text-gray-600 text-sm">
+          孔子最终领悟"朝闻道，夕死可矣"
+        </p>
+      </div>
+
+      <!-- Cell 5 - Key Concepts -->
+      <div class="bento-cell md:col-span-2 bg-white rounded-3xl p-8 shadow-lg border border-gray-100">
+        <h3 class="text-3xl font-bold text-gray-800 mb-6">核心智慧</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="flex items-start">
+            <div class="bg-amber-100 p-3 rounded-full mr-4 flex-shrink-0">
+              <i class="fas fa-lightbulb text-amber-500 text-xl"></i>
+            </div>
+            <div>
+              <h4 class="text-xl font-bold text-gray-800 mb-2">光而不耀</h4>
+              <p class="text-gray-600">
+                老子告诫孔子不要锋芒毕露，要"光而不耀，静水深流"
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="bg-cyan-100 p-3 rounded-full mr-4 flex-shrink-0">
+              <i class="fas fa-brain text-cyan-500 text-xl"></i>
+            </div>
+            <div>
+              <h4 class="text-xl font-bold text-gray-800 mb-2">君子不器</h4>
+              <p class="text-gray-600">
+                不要局限单一视角，要以开放心态拥抱世界
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="bg-emerald-100 p-3 rounded-full mr-4 flex-shrink-0">
+              <i class="fas fa-heart text-emerald-500 text-xl"></i>
+            </div>
+            <div>
+              <h4 class="text-xl font-bold text-gray-800 mb-2">顺其自然</h4>
+              <p class="text-gray-600">
+                "随心所欲不逾矩" - 孔子最终领悟的人生境界
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="bg-rose-100 p-3 rounded-full mr-4 flex-shrink-0">
+              <i class="fas fa-eye text-rose-500 text-xl"></i>
+            </div>
+            <div>
+              <h4 class="text-xl font-bold text-gray-800 mb-2">破相悟道</h4>
+              <p class="text-gray-600">
+                如六祖慧能"菩提本无树"般不着相，向内求道
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cell 6 - Water Metaphor -->
+      <div class="bento-cell bg-gradient-to-br from-blue-500 to-cyan-400 rounded-3xl p-8 shadow-lg text-white">
+        <div class="flex items-center mb-4">
+          <i class="fas fa-water text-white text-3xl mr-4"></i>
+          <h3 class="text-3xl font-black">水的智慧</h3>
+        </div>
+        <ul class="space-y-3">
+          <li class="flex items-start">
+            <i class="fas fa-check-circle mr-3 mt-1 text-blue-200"></i>
+            <span>柔弱胜刚强</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check-circle mr-3 mt-1 text-blue-200"></i>
+            <span>利万物而不争</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check-circle mr-3 mt-1 text-blue-200"></i>
+            <span>不炫耀功绩</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check-circle mr-3 mt-1 text-blue-200"></i>
+            <span>不显露锋芒</span>
+          </li>
+          <li class="flex items-start">
+            <i class="fas fa-check-circle mr-3 mt-1 text-blue-200"></i>
+            <span>顺势而为</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="bg-white rounded-3xl p-8 shadow-lg border border-gray-100 mb-16">
+      <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">对话时间线</h2>
+      <div class="relative">
+        <!-- Timeline line -->
+        <div class="absolute left-1/2 h-full w-1 bg-gray-200 transform -translate-x-1/2"></div>
+        
+        <!-- Timeline items -->
+        <div class="space-y-12">
+          <!-- Item 1 -->
+          <div class="relative flex items-center">
+            <div class="absolute left-1/2 w-6 h-6 rounded-full bg-blue-500 transform -translate-x-1/2 border-4 border-white shadow"></div>
+            <div class="ml-8 md:ml-16 w-full md:w-5/12">
+              <div class="bg-blue-50 p-6 rounded-xl">
+                <div class="text-blue-500 font-bold mb-1">第一次对话</div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">上善若水的启示</h3>
+                <p class="text-gray-600">
+                  年轻孔子愤青时期，老子在黄河边以水为喻，教导"柔弱胜刚强"的智慧
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="relative flex justify-end items-center">
+            <div class="absolute left-1/2 w-6 h-6 rounded-full bg-green-500 transform -translate-x-1/2 border-4 border-white shadow"></div>
+            <div class="mr-8 md:mr-16 w-full md:w-5/12">
+              <div class="bg-green-50 p-6 rounded-xl">
+                <div class="text-green-500 font-bold mb-1">第二次对话</div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">顺其自然的智慧</h3>
+                <p class="text-gray-600">
+                  34岁迷茫时期，老子指出"天地万物皆自然"，过度干预反而适得其反
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="relative flex items-center">
+            <div class="absolute left-1/2 w-6 h-6 rounded-full bg-purple-500 transform -translate-x-1/2 border-4 border-white shadow"></div>
+            <div class="ml-8 md:ml-16 w-full md:w-5/12">
+              <div class="bg-purple-50 p-6 rounded-xl">
+                <div class="text-purple-500 font-bold mb-1">第三次对话</div>
+                <h3 class="text-xl font-bold text-gray-800 mb-2">天道的终极领悟</h3>
+                <p class="text-gray-600">
+                  51岁悟道时期，探讨"何为天道"，孔子最终明白"朝闻道，夕死可矣"
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="text-center text-gray-500 text-sm">
+      <p>传统智慧 · 现代启示 · 孔子与老子的三次神圣对话</p>
+      <p class="mt-2">© 2023 传统文化读书会 · 木兰讲坛</p>
+    </div>
+  </div>
+
+  <script>
+    // Simple animation trigger
+    document.addEventListener('DOMContentLoaded', function() {
+      const bentoCells = document.querySelectorAll('.bento-cell');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, { threshold: 0.1 });
+
+      bentoCells.forEach(cell => {
+        cell.style.opacity = 0;
+        cell.style.transform = 'translateY(20px)';
+        cell.style.transition = 'all 0.6s ease-out';
+        observer.observe(cell);
+      });
+    });
+  </script>
+</body>
+</html>
