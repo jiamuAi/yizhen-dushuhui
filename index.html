@@ -56,5 +56,12 @@
   <div id="root"></div>
 
   <!-- 加载 App.jsx 文件 -->
+  <script>
+    if (sessionStorage.redirect) {
+      const path = sessionStorage.redirect;
+      sessionStorage.removeItem('redirect');
+      window.history.replaceState(null, '', path);
+    }
+  </script>
 </body>
 </html>
