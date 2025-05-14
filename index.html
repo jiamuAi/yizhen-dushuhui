@@ -17,6 +17,13 @@
 
   <!-- 引入 Babel 编译器 -->
   <script src="https://unpkg.com/ @babel/standalone/babel.min.js"></script>
+  <script>
+    if (sessionStorage.redirect) {
+      const path = sessionStorage.redirect;
+      sessionStorage.removeItem('redirect');
+      window.history.replaceState(null, '', path);
+    }
+  </script>
 
   <!-- 自定义样式 -->
   <style>
@@ -56,12 +63,5 @@
   <div id="root"></div>
 
   <!-- 加载 App.jsx 文件 -->
-  <script>
-    if (sessionStorage.redirect) {
-      const path = sessionStorage.redirect;
-      sessionStorage.removeItem('redirect');
-      window.history.replaceState(null, '', path);
-    }
-  </script>
 </body>
 </html>
