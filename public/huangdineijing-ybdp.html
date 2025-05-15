@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>黄帝内经养生之道 | 十气平衡体系</title>
+  <script src="https://cdn.tailwindcss.com/3.4.1"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap');
+    
+    body {
+      font-family: 'Noto Sans SC', sans-serif;
+      background-color: #f8f9fa;
+    }
+    
+    .bento-cell {
+      transition: all 0.3s ease;
+    }
+    
+    .bento-cell:hover {
+      transform: translateY(-5px);
+    }
+    
+    .qi-gradient-1 {
+      background: linear-gradient(135deg, rgba(255, 107, 107, 0.15) 0%, rgba(255, 107, 107, 0) 100%);
+    }
+    
+    .qi-gradient-2 {
+      background: linear-gradient(135deg, rgba(77, 171, 247, 0.15) 0%, rgba(77, 171, 247, 0) 100%);
+    }
+    
+    .qi-gradient-3 {
+      background: linear-gradient(135deg, rgba(253, 203, 110, 0.15) 0%, rgba(253, 203, 110, 0) 100%);
+    }
+    
+    .qi-gradient-4 {
+      background: linear-gradient(135deg, rgba(120, 111, 166, 0.15) 0%, rgba(120, 111, 166, 0) 100%);
+    }
+    
+    .chart-container {
+      height: 100%;
+      width: 100%;
+    }
+    
+    .pulse-animation {
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-gray-50">
+  <div class="container mx-auto px-4 py-12 max-w-7xl">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h1 class="text-5xl md:text-7xl font-black text-gray-900 mb-4">
+        黄帝内经 <span class="text-red-500">养生十气</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto">
+        源自五千年的生命智慧 · 掌握健康自主权
+      </p>
+    </div>
+    
+    <!-- Bento Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+      <!-- 6 External Qi -->
+      <div class="md:col-span-2 bento-cell qi-gradient-1 rounded-3xl p-8 shadow-lg">
+        <div class="flex items-center mb-6">
+          <div class="bg-red-500 text-white rounded-full w-16 h-16 flex items-center justify-center mr-4">
+            <i class="fas fa-wind text-2xl"></i>
+          </div>
+          <h2 class="text-3xl font-bold text-gray-900">六邪之气</h2>
+        </div>
+        <p class="text-gray-600 mb-6 text-lg">
+          自然界的六种致病因素，需时刻防御
+        </p>
+        
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div class="bg-white rounded-xl p-4 shadow-sm">
+            <div class="text-red-500 mb-2"><i class="fas fa-cloud text-xl"></i></div>
+            <h3 class="font-bold text-lg">风</h3>
+            <p class="text-sm text-gray-500">百邪之长，携带其他邪气</p>
+          </div>
+          <div class="bg-white rounded-xl p-4 shadow-sm">
+            <div class="text-blue-400 mb-2"><i class="fas fa-snowflake text-xl"></i></div>
+            <h3 class="font-bold text-lg">寒</h3>
+            <p class="text-sm text-gray-500">凝滞气血，导致淤堵</p>
+          </div>
+          <div class="bg-white rounded-xl p-4 shadow-sm">
+            <div class="text-yellow-500 mb-2"><i class="fas fa-sun text-xl"></i></div>
+            <h3 class="font-bold text-lg">暑</h3>
+            <p class="text-sm text-gray-500">内热郁结，耗伤津液</p>
+          </div>
+          <div class="bg-white rounded-xl p-4 shadow-sm">
+            <div class="text-green-500 mb-2"><i class="fas fa-tint text-xl"></i></div>
+            <h3 class="font-bold text-lg">湿</h3>
+            <p class="text-sm text-gray-500">粘滞重浊，阻碍气机</p>
+          </div>
+          <div class="bg-white rounded-xl p-4 shadow-sm">
+            <div class="text-orange-500 mb-2"><i class="fas fa-fire text-xl"></i></div>
+            <h3 class="font-bold text-lg">燥</h3>
+            <p class="text-sm text-gray-500">津液不足，干涩不适</p>
+          </div>
+          <div class="bg-white rounded-xl p-4 shadow-sm">
+            <div class="text-purple-500 mb-2"><i class="fas fa-burn text-xl"></i></div>
+            <h3 class="font-bold text-lg">火</h3>
+            <p class="text-sm text-gray-500">内生热邪，灼伤阴液</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- 4 Internal Qi -->
+      <div class="bento-cell qi-gradient-2 rounded-3xl p-8 shadow-lg">
+        <div class="flex items-center mb-6">
+          <div class="bg-blue-500 text-white rounded-full w-16 h-16 flex items-center justify-center mr-4">
+            <i class="fas fa-shield-alt text-2xl"></i>
+          </div>
+          <h2 class="text-3xl font-bold text-gray-900">四正之气</h2>
+        </div>
+        <p class="text-gray-600 mb-6 text-lg">
+          人体的防御系统，需精心养护
+        </p>
+        
+        <div class="space-y-4">
+          <div class="bg-white bg-opacity-80 rounded-xl p-4 shadow-sm">
+            <div class="flex items-center">
+              <div class="bg-blue-100 text-blue-600 rounded-full w-10 h-10 flex items-center justify-center mr-3">
+                <i class="fas fa-atom"></i>
+              </div>
+              <h3 class="font-bold">元气</h3>
+            </div>
+            <p class="text-sm text-gray-500 mt-1">先天肾精 + 后天脾胃</p>
+          </div>
+          
+          <div class="bg-white bg-opacity-80 rounded-xl p-4 shadow-sm">
+            <div class="flex items-center">
+              <div class="bg-blue-100 text-blue-600 rounded-full w-10 h-10 flex items-center justify-center mr-3">
+                <i class="fas fa-lungs"></i>
+              </div>
+              <h3 class="font-bold">中气</h3>
+            </div>
+            <p class="text-sm text-gray-500 mt-1">肺主呼吸 + 脾胃运化</p>
+          </div>
+          
+          <div class="bg-white bg-opacity-80 rounded-xl p-4 shadow-sm">
+            <div class="flex items-center">
+              <div class="bg-blue-100 text-blue-600 rounded-full w-10 h-10 flex items-center justify-center mr-3">
+                <i class="fas fa-heartbeat"></i>
+              </div>
+              <h3 class="font-bold">营气</h3>
+            </div>
+            <p class="text-sm text-gray-500 mt-1">营养运输 + 血液运行</p>
+          </div>
+          
+          <div class="bg-white bg-opacity-80 rounded-xl p-4 shadow-sm">
+            <div class="flex items-center">
+              <div class="bg-blue-100 text-blue-600 rounded-full w-10 h-10 flex items-center justify-center mr-3">
+                <i class="fas fa-shield-virus"></i>
+              </div>
+              <h3 class="font-bold">卫气</h3>
+            </div>
+            <p class="text-sm text-gray-500 mt-1">防御外邪 + 温煦体表</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Second Row - Three Key Principles -->
+      <div class="md:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Key Principle 1 - 天年之数 -->
+        <div class="bento-cell qi-gradient-3 rounded-3xl p-8 shadow-lg">
+          <div class="flex items-center mb-6">
+            <div class="bg-yellow-500 text-white rounded-full w-16 h-16 flex items-center justify-center mr-4">
+              <span class="text-3xl font-bold">120</span>
+            </div>
+            <h2 class="text-3xl font-bold text-gray-900">天年之数</h2>
+          </div>
+          <p class="text-gray-600 mb-6 text-lg">
+            黄帝内经揭示的人类自然寿命
+          </p>
+          
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <div class="flex justify-between items-center mb-4">
+              <div>
+                <h3 class="font-bold text-xl">现代人寿命</h3>
+                <p class="text-gray-500">平均70-80岁</p>
+              </div>
+              <div class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-bold">
+                -40年
+              </div>
+            </div>
+            
+            <div class="h-4 bg-gray-200 rounded-full mb-2">
+              <div class="h-4 bg-yellow-500 rounded-full" style="width: 60%"></div>
+            </div>
+            
+            <div class="flex justify-between items-center">
+              <div>
+                <h3 class="font-bold text-xl">天年寿命</h3>
+                <p class="text-gray-500">黄帝内经标准</p>
+              </div>
+              <div class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-bold">
+                120岁
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Key Principle 2 - 全息表里 -->
+        <div class="bento-cell qi-gradient-4 rounded-3xl p-8 shadow-lg">
+          <div class="flex items-center mb-6">
+            <div class="bg-purple-500 text-white rounded-full w-16 h-16 flex items-center justify-center mr-4">
+              <i class="fas fa-balance-scale-right text-2xl"></i>
+            </div>
+            <h2 class="text-3xl font-bold text-gray-900">全息表里</h2>
+          </div>
+          <p class="text-gray-600 mb-6 text-lg">
+            东方医学的整体观与辩证思维
+          </p>
+          
+          <div class="bg-white rounded-xl p-6 shadow-sm">
+            <div class="flex mb-4">
+              <div class="flex-1 pr-4 border-r border-gray-200">
+                <h3 class="font-bold text-lg mb-2">表象症状</h3>
+                <ul class="text-sm space-y-1 text-gray-600">
+                  <li><i class="fas fa-eye text-purple-500 mr-2"></i> 眼睛干涩</li>
+                  <li><i class="fas fa-ear-listen text-purple-500 mr-2"></i> 听力下降</li>
+                  <li><i class="fas fa-bed text-purple-500 mr-2"></i> 失眠多梦</li>
+                </ul>
+              </div>
+              <div class="flex-1 pl-4">
+                <h3 class="font-bold text-lg mb-2">内在根源</h3>
+                <ul class="text-sm space-y-1 text-gray-600">
+                  <li><i class="fas fa-liver text-purple-500 mr-2"></i> 肝血不足</li>
+                  <li><i class="fas fa-kidneys text-purple-500 mr-2"></i> 肾气亏虚</li>
+                  <li><i class="fas fa-heart text-purple-500 mr-2"></i> 心神不宁</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="text-center mt-4">
+              <div class="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-bold">
+                <i class="fas fa-arrows-alt-h mr-2"></i> 表里对应
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Key Principle 3 - 健康自主 -->
+        <div class="bento-cell bg-white rounded-3xl p-8 shadow-lg">
+          <div class="flex items-center mb-6">
+            <div class="bg-green-500 text-white rounded-full w-16 h-16 flex items-center justify-center mr-4 pulse-animation">
+              <i class="fas fa-hand-holding-heart text-2xl"></i>
+            </div>
+            <h2 class="text-3xl font-bold text-gray-900">健康自主</h2>
+          </div>
+          
+          <div>
+            <h3 class="text-xl font-bold mb-4 text-gray-800">养生核心原则</h3>
+            <ul class="space-y-3 text-gray-700 mb-6">
+              <li class="flex items-start">
+                <div class="bg-green-100 text-green-600 rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                  <i class="fas fa-check text-xs"></i>
+                </div>
+                <span>了解自己的先天体质</span>
+              </li>
+              <li class="flex items-start">
+                <div class="bg-green-100 text-green-600 rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                  <i class="fas fa-check text-xs"></i>
+                </div>
+                <span>顺应四时调养身心</span>
+              </li>
+              <li class="flex items-start">
+                <div class="bg-green-100 text-green-600 rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                  <i class="fas fa-check text-xs"></i>
+                </div>
+                <span>平衡十气防御六邪</span>
+              </li>
+              <li class="flex items-start">
+                <div class="bg-green-100 text-green-600 rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">
+                  <i class="fas fa-check text-xs"></i>
+                </div>
+                <span>把健康交给自己</span>
+              </li>
+            </ul>
+            
+            <h3 class="text-xl font-bold mb-4 text-gray-800">养生实践方法</h3>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="bg-green-50 rounded-lg p-3 text-center">
+                <div class="bg-green-100 text-green-600 rounded-full w-10 h-10 flex items-center justify-center mx-auto mb-2">
+                  <i class="fas fa-utensils"></i>
+                </div>
+                <p class="text-sm font-medium">食疗调理</p>
+              </div>
+              <div class="bg-green-50 rounded-lg p-3 text-center">
+                <div class="bg-green-100 text-green-600 rounded-full w-10 h-10 flex items-center justify-center mx-auto mb-2">
+                  <i class="fas fa-spa"></i>
+                </div>
+                <p class="text-sm font-medium">呼吸吐纳</p>
+              </div>
+              <div class="bg-green-50 rounded-lg p-3 text-center">
+                <div class="bg-green-100 text-green-600 rounded-full w-10 h-10 flex items-center justify-center mx-auto mb-2">
+                  <i class="fas fa-moon"></i>
+                </div>
+                <p class="text-sm font-medium">规律作息</p>
+              </div>
+              <div class="bg-green-50 rounded-lg p-3 text-center">
+                <div class="bg-green-100 text-green-600 rounded-full w-10 h-10 flex items-center justify-center mx-auto mb-2">
+                  <i class="fas fa-brain"></i>
+                </div>
+                <p class="text-sm font-medium">情绪管理</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Call to Action -->
+    <div class="text-center mt-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        掌握<span class="text-red-500">十气平衡</span>，活出<span class="text-blue-500">天年之寿</span>
+      </h2>
+      <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+        加入黄帝内经读书会，深入理解五脏能量体系，将健康真正掌握在自己手中
+      </p>
+      <button class="bg-gradient-to-r from-red-500 to-blue-500 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105">
+        立即加入读书会 <i class="fas fa-arrow-right ml-2"></i>
+      </button>
+    </div>
+  </div>
+  
+  <script>
+    // Simple animation for hover effects
+    document.querySelectorAll('.bento-cell').forEach(cell => {
+      cell.addEventListener('mouseenter', function() {
+        this.style.boxShadow = '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+      });
+      
+      cell.addEventListener('mouseleave', function() {
+        this.style.boxShadow = '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)';
+      });
+    });
+  </script>
+</body>
+</html>
